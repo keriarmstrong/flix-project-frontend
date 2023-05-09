@@ -5,7 +5,7 @@ import Edit from './pages/Edit';
 import Index from './pages/Index';
 import Landing from './pages/Landing';
 import New from './pages/New';
-import Show from './components/Show';
+import Display from './pages/Display';
 
 //Component
 import NavBar from './components/NavBar';
@@ -19,7 +19,7 @@ function App() {
         <Route path="/shows" element={<Index />}/>
         <Route path="/" element={<Landing />} />
         <Route path="/shows/new" element={<New />} />
-        <Route path="/shows/:id" element={<Show />} />
+        <Route path="/shows/:id" element={<Display />} />
       </Routes>
     </div>
   );

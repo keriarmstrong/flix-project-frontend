@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <div>
-    Nav Bar
+    <button>
+      <Link to='/shows'>Shows</Link>
+    </button>
+    <button>
+      <Link to='/shows/new'>New Show</Link>
+    </button>
     </div>
   )
 }
