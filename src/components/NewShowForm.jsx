@@ -53,7 +53,7 @@ export default function NewShowForm() {
   return (
     <div className='newFormContainer'>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title</label>
+        <label className="title">Title</label>
         <input 
           id="title"
           value={show.title}
@@ -62,7 +62,7 @@ export default function NewShowForm() {
           placeholder="Enter show title"
           required
         />
-        <label htmlFor="year">Year</label>
+        <label className="year">Year</label>
         <input 
         id="year"
         value={show.year}
@@ -71,7 +71,7 @@ export default function NewShowForm() {
         placeholder="Enter Year Aired"
         required
         />
-        <label htmlFor="tvRating">TV Rating</label>
+        <label className="tvRating">TV Rating</label>
         <input 
         id="tv_rating"
         value={show.tv_rating}
@@ -79,7 +79,7 @@ export default function NewShowForm() {
         onChange={handleTextChange}
         placeholder="Enter Rating"
         />
-        <label htmlFor="numOfEpisodes" >Number of Episodes</label>
+        <label className="numOfEpisodes" >Number of Episodes</label>
         <input 
         id="num_episodes"
         value={show.num_episodes}
@@ -87,7 +87,7 @@ export default function NewShowForm() {
         onChange={handleTextChange}
         placeholder="Enter the Number of Episodes"
         />
-        <label htmlFor="numOfSeasons">Number of Seasons</label>
+        <label className="numOfSeasons">Number of Seasons</label>
         <input 
         id="num_seasons"
         value={show.num_seasons}
@@ -95,7 +95,7 @@ export default function NewShowForm() {
         onChange={handleTextChange}
         placeholder="Enter Number of Seasons"
         />
-        <label htmlFor="actors">Actors</label>
+        <label className="actors">Actors</label>
         <input 
         id="actors"
         value={show.actors}
@@ -103,16 +103,19 @@ export default function NewShowForm() {
         onChange={handleTextChange}
         placeholder="Enter Actors"
         />
-        <label htmlFor="starRating">Star Rating</label>
+        <label className="starRating">Star Rating</label>
         <input 
         id="star_rating"
         value={show.star_rating}
-        type="text"
+        type="number"
+        min="0"
+        max="5"
+        step="1"
         onChange={handleTextChange}
         placeholder="Enter Rating"
         />
          {/*  DROPDOWN */}
-         <label htmlFor="genre">Genre</label>
+         <label className="genre">Genre</label>
         <input 
         id="genre"
         value={show.genre}
@@ -120,7 +123,7 @@ export default function NewShowForm() {
         onChange={handleTextChange}
         placeholder="Enter genre"
         />
-        <label htmlFor="favorite">Favorite</label>
+        <label className="favorite">Favorite</label>
         <input 
         id="favorite"
         value={show.is_favorite}
