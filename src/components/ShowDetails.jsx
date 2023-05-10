@@ -50,7 +50,7 @@ export default function ShowDetails() {
       <p> Favorite: {show.is_favorite ? <span>⭐️</span> : <span>❌</span>}</p>
       <div>
         <Link to={`/shows`}><button>Back</button></Link>
-        
+        <Link to={`/shows/${id}/edit`}><button>Edit</button></Link>
       </div>
       <div>
         <button onClick={handleDelete}>Delete</button>
