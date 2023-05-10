@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import star from '../assets/starIcon.png'
 
 export default function Show({ show }) {
   console.log(show)
@@ -16,6 +17,10 @@ export default function Show({ show }) {
       </td>
       <td>
         {show.star_rating}
+      </td>
+      <td>
+      {show.star_rating === "5" ? <img src={star} alt="5 stars" className='starIcon' /> : null}
+
       </td>
       <td>
         {show.genre}
