@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import star from '../assets/starIcon.png'
+import BingeWorthy from './BingeWorthy';
 
 export default function Show({ show }) {
-  console.log(show)
+  // console.log(show)
   return (
     <tr>
       <td>
@@ -21,6 +22,9 @@ export default function Show({ show }) {
       <td>
       {show.star_rating === "5" ? <img src={star} alt="5 stars" className='starIcon' /> : null}
 
+      </td>
+      <td>
+        <BingeWorthy show={show}/>
       </td>
       <td>
         {show.genre}
