@@ -15,8 +15,16 @@ export default function Shows() {
       .catch((error) => console.warn("catch", error));
   }, []);
   return (
+    
     <div className="shows">
-      <section>
+      {shows.map((show) => {
+      return <div class="row">
+       
+        <Show key={show.id} show={show} />
+       
+        </div>
+    })}
+      {/* <section>
         <div class="row">
         <h3 class="col-2">Browse Shows</h3>
         </div>
@@ -36,7 +44,7 @@ export default function Shows() {
             })}
           </tbody>
         </table>
-      </section>
+      </section> */}
     </div>
   );
 }
