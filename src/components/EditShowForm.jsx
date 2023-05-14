@@ -62,7 +62,7 @@ export default function EditShowForm() {
           style={{
             background: "lightgrey",
             borderRadius: "10px",
-            marginBottom: "40px",
+            marginBottom: "6em",
           }}
         >
           <div className="editFormContainer p-4">

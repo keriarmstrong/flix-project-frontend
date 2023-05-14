@@ -59,7 +59,7 @@ export default function NewShowForm() {
           style={{
             background: "lightgrey",
             borderRadius: "10px",
-            marginBottom: "40px",
+            marginBottom: "6em",
           }}
         >
           <div className="newFormContainer p-4">

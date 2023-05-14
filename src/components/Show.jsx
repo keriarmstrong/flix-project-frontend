@@ -9,7 +9,7 @@ export default function Show({ show }) {
     
       <tr>
         <td>
-          <Link to={`/shows/${show.id}`}>{show.title}</Link>
+          <Link to={`/shows/${show.id}`} style={{ textDecoration: 'none' }}>{show.title}</Link>
         </td>
         <td>
           {show.year}
