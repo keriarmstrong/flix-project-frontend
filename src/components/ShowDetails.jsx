@@ -1,12 +1,9 @@
-import React from 'react';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
-
-
-
 
 export default function ShowDetails() {
   const [show, setShow] = useState([]);
@@ -14,29 +11,35 @@ export default function ShowDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${API}/shows/${id}`)
-    .then((response) => {
-      setShow(response.data);
-    })
-    .catch((error) => {
-      console.warn('catch', error);
-    })
+    axios
+      .get(`${API}/shows/${id}`)
+      .then((response) => {
+        setShow(response.data);
+      })
+      .catch((error) => {
+        console.warn("catch", error);
+      });
   }, [id]);
 
   const deleteShow = () => {
     axios
-    .delete(`${API}/shows/${id}`)
-    .then((response) => {
-      navigate(`/shows`);
-    },
-    (error) => console.error(error))
-    .catch((c) => console.warn(c))
-  }
+      .delete(`${API}/shows/${id}`)
+      .then(
+        (response) => {
+          navigate(`/shows`);
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn(c));
+  };
 
   const handleDelete = () => {
-    deleteShow();
-  }
-  
+    const confirmDelete = window.confirm("Are you sure you want to delete this show?");
+    if (confirmDelete) {
+      deleteShow();
+    }
+  };
+
   return (
     <div>
       <h3>{show.title}</h3>
@@ -49,15 +52,16 @@ export default function ShowDetails() {
       <p> Actors: {show.actors}</p>
       <p> Favorite: {show.is_favorite ? <span>⭐️</span> : <span>❌</span>}</p>
       <div>
-        <Link to={`/shows`}><button>Back</button></Link>
-        <Link to={`/shows/${id}/edit`}><button>Edit</button></Link>
+        <Link to={`/shows`}>
+          <button>Back</button>
+        </Link>
+        <Link to={`/shows/${id}/edit`}>
+          <button>Edit</button>
+        </Link>
       </div>
       <div>
         <button onClick={handleDelete}>Delete</button>
       </div>
-      
-
     </div>
-    
-  )
+  );
 }
