@@ -17,13 +17,20 @@ export default function Shows() {
   return (
     <div className="shows">
       <section>
-        <table>
+        <div class="row">
+        <h3 class="col-2">Browse Shows</h3>
+        </div>
+        <table class="table table-striped table-hover table-sm offset-1"  style={{width: "85%"}}>
           <thead>
             <tr>
-            <th>Browse Shows</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>TV Rating</th>
+            <th>Rating</th>
+            <th>Genre</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="table-group-divider">
             {shows.map((show) => {
               return <Show key={show.id} show={show} />;
             })}
