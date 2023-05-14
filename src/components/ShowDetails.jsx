@@ -6,9 +6,6 @@ import placeholder from "../assets/show-placeholder.png"
 
 const API = process.env.REACT_APP_API_URL;
 
-
-
-
 export default function ShowDetails() {
   const [show, setShow] = useState([]);
   const { id } = useParams();

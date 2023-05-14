@@ -1,9 +1,9 @@
-import NewShowForm from "../components/NewShowForm"
+import NewShowForm from "../components/NewShowForm";
 
 export default function New() {
   return (
     <div>
-      New Form Page
+      <h3 style={{ paddingTop: '20px' }}>Add New Show</h3>
       <NewShowForm />
     </div>
   )

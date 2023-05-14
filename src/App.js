@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //Pages
 import Edit from './pages/Edit';
 import Index from './pages/Index';
