@@ -6,9 +6,11 @@ import Index from './pages/Index';
 import Landing from './pages/Landing';
 import New from './pages/New';
 import Display from './pages/Display';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 //Component
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/shows/new" element={<New />} />
         <Route path="/shows/:id" element={<Display />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
