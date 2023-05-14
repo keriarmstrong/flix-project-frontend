@@ -19,7 +19,7 @@ export default function BingeWorthy({show}) {
 
   return (
     <div>
-      {binge ? <img style={{width: "20%"}} src={bingeWorth} alt="bing worthy"/> : null}
+      {binge ? <img style={{width: "150%"}} src={bingeWorth} alt="bing worthy"/> : null}
     </div>
   )
 }

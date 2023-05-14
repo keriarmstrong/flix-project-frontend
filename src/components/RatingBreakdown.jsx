@@ -1,17 +1,16 @@
 //Extra Stretch goal
 
-// import React from 'react'
+import React from 'react'
 
-// export default function RatingBreakdown() {
-//   return (
-//     <div>
-//       <span>⭐️⭐️⭐️⭐️⭐️</span>{fiveStars}
-//       <span>⭐️⭐️⭐️⭐️</span>{fourStars}
-//       <span>⭐️⭐️⭐️</span>{threeStars}
-//       <span>⭐️⭐️</span>{twoStars}
-//       <span>⭐️</span>{oneStars}
-//     </div>
-//   )
-// }
+export default function RatingBreakdown({rating}) {
+const stars = "⭐️".repeat(rating);
+
+  return (
+
+    <div>
+   <span>{stars}</span>
+    </div>
+  )
+}
 
 

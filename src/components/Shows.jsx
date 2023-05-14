@@ -17,34 +17,15 @@ export default function Shows() {
   return (
     
     <div className="shows">
+      <div class="row row-col-3 g-2">
       {shows.map((show) => {
-      return <div class="row">
+      return <div class="col-3 ">
        
         <Show key={show.id} show={show} />
        
         </div>
     })}
-      {/* <section>
-        <div class="row">
-        <h3 class="col-2">Browse Shows</h3>
-        </div>
-        <table class="table table-striped table-hover table-sm offset-1"  style={{width: "85%"}}>
-          <thead>
-            <tr>
-            <th>Title</th>
-            <th>Year</th>
-            <th>TV Rating</th>
-            <th>Rating</th>
-            <th>Genre</th>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-            {shows.map((show) => {
-              return <Show key={show.id} show={show} />;
-            })}
-          </tbody>
-        </table>
-      </section> */}
+      </div>
     </div>
   );
 }
