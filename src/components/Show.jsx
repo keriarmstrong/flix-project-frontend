@@ -27,7 +27,7 @@ export default function Show({ show }) {
                   <BingeWorthy show={show} />
                 </div>
                 <div class="col-2">
-                  {show.star_rating === "5" ? <img style={{ width: "10%" }} src={star} alt="5 stars" className='starIcon' /> : null}
+                  {show.star_rating === "5" ? <img style={{ width: "150%" }} src={star} alt="5 stars" className='starIcon' /> : null}
                 </div>
                
               </div>
