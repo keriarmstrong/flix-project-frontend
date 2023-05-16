@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../assets/flick-hand.png"
 
 export default function NavBar() {
   return (
@@ -12,7 +11,6 @@ export default function NavBar() {
             <div class="col-1">
               <Link to="/shows" style={{ textDecoration: 'none' }}>
                 {" "}
-                {/* <img src={logo} alt="logo" class="img" style={{width: "50px"}}/> */}
                 <h1>Flix</h1>
               </Link>
             </div>
