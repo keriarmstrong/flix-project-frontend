@@ -10,8 +10,8 @@ export default function Show({ show }) {
   return (
 
 
-    <div class="container" >
-      <Link to={`/shows/${show.id}`}>
+    <div class="container-lg" >
+      <Link to={`/shows/${show.id}`} style={{textDecoration: "none"}}>
         <div class="card" style={{ width: "350px", height: "auto" }} >
           <div class="border border-2 p-1">
             <img class="img" style={{width: "100%", height: "250px"}} src={indexPlaceholder} alt="placeholder" />

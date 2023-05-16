@@ -15,16 +15,19 @@ export default function Shows() {
       .catch((error) => console.warn("catch", error));
   }, []);
   return (
-    
-    <div className="shows">
-      <div class="row row-col-3 g-2">
-      {shows.map((show) => {
-      return <div class="col-3 ">
-       
-        <Show key={show.id} show={show} />
-       
-        </div>
-    })}
+
+    <div class="container-fluid">
+      <div class="row">
+        <div></div>
+      </div>
+      <div class="row gy-4">
+        
+        {shows.map((show) => {
+          return <div class="col">
+            <Show key={show.id} show={show} />
+          </div>
+        })}
+
       </div>
     </div>
   );
